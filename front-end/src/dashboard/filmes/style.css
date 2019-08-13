@@ -1,0 +1,27 @@
+.card{
+    margin: 60px 100px -20px 100px;
+}
+
+.imgCard{
+    width: 180px;
+    align-items: center;
+    
+}
+
+.titulo{
+    margin: 10px 10px 30px 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.texto{
+    font-size: 15px;
+    text-align: justify;
+    margin-bottom: 35px;
+}
+
+.info{
+    font-size: 15px;
+    text-align: inherit;
+    height: 10px;
+}
