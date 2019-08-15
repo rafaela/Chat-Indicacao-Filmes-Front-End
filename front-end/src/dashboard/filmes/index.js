@@ -26,8 +26,8 @@ export default class Main extends Component{
         return (
             <div className='lista-filmes'>
                 {this.state.filmes.map(filme => (
-                    <Card style={{ width: '25rem' }} className="card">
-                        <Card.Img variant="top" src={filme.imagem} className="imgCard"/>
+                    <Card style={{ width: '25rem' }} key={filme._id} className="card">
+                        <Card.Img variant="top" key ={filme}src={filme.imagem} className="imgCard"/>
                         <Card.Body>
                             <Card.Title className="titulo">{filme.titulo}</Card.Title>
                             <Card.Text className="texto">{filme.resumo}</Card.Text>

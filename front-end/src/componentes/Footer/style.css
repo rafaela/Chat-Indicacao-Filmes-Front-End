@@ -1,18 +1,16 @@
-.contato{
-	width: 100%;
-    height: 100px;
-    background-color: #070707;
-    align-items: center;
+.footer{
+    border: none;
 }
 
-.contato p{
-	font-size: 25px;
-    margin: 10px ;
-    font-weight: bold;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    
+.header{
+    font-size: 25px;
+    background-color: #fafafa;
+    color: #333;
+    border: none;
+}
+
+.body{
+    background-color: #fafafa;
 }
 
 a{

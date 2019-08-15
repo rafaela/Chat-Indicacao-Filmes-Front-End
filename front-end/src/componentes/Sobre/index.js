@@ -3,9 +3,12 @@ import './style.css'
 
 const Sobre = () => (
     <div>
-        <h1>Sobre Nós</h1>
+        <h1 id="sobre">Sobre Nós</h1>
         <p>
-            Nós somos a XXXX, e o nosso objetivo é te ajudar a escolher filmes.
+            Nós somos a IndicaCine, e o nosso objetivo é te ajudar a escolher filmes.<br/>
+            O nosso critério de escolha é baseado com a avaliação que cada filme obteve.<br/>
+            A intenção é que você conheça os melhores!<br/>
+            Nos chame no chat para que possamos te ajudar melhor.
 
         </p>
     </div>

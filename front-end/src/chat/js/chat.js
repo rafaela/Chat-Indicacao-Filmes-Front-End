@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 $(function () {
     $(".button.close").click(function () {
         $(".chat_window").animate({
@@ -11,7 +13,7 @@ $(function () {
 
     $(".top_menu").click(function () {
         let size = $(".chat_window").height();
-        if (size == 500) {
+        if (size === 500) {
             $(".chat_window").animate({
                 opacity: .4,
                 height: "60"
