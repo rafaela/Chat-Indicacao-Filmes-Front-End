@@ -1,11 +1,12 @@
 .card{
-    margin: 60px 100px -20px 100px;
+    margin: 60px 0px;
 }
 
 .imgCard{
-    width: 180px;
+    width: 100px;
     align-items: center;
-    margin:0 auto;
+    margin: 0 auto;
+    margin-top: 20px;
     
 }
 
@@ -13,7 +14,8 @@
     display: block;
 }
 .titulo{
-    margin: 10px 10px 30px 10px;
+    padding: 50px 5px;
+    padding-top: 20px;
     text-align: center;
     font-size: 18px;
 }
@@ -21,7 +23,8 @@
 .texto{
     font-size: 15px;
     text-align: justify;
-    margin-bottom: 35px;
+    padding: 60px 5px;
+    padding-bottom: 80px;
 }
 
 .info{

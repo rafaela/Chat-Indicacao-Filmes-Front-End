@@ -24,8 +24,6 @@ export default function (state = INICIAL_STATE, action){
         case 'MOVIES_FETCHED':
             let moviesItems = action.payload.data.context ?
             action.payload.data.context.filmes || [] : [];
-
-            console.log(moviesItems);
             
             return { ...state, movie: moviesItems }
         default:

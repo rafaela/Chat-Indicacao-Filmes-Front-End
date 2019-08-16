@@ -15,7 +15,7 @@ const Header = () => (
             <Link to={'/sobre'}>Sobre</Link>
           </li>
           <li className="active">
-            <div className="link-show button">Chat</div>
+            <div className="chat-show link">Chat</div>
           </li>
         </ul>
       </nav>

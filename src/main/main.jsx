@@ -4,8 +4,6 @@ import { Switch, Route, withRouter } from 'react-router-dom';
 
 import React from 'react'
 import Chat from '../chat/chat'
-import Footer from '../componentes/Footer';
-import Header from '../componentes/Header';
 import Sobre from '../componentes/Sobre/index'
 import Genero from '../generos/genero'
 
@@ -15,17 +13,15 @@ import Filmes from '../filmes';
 class Main extends React.Component {
 
     render() {
-        const { cart } = this.props;
+        console.log(this.props.filmes)
         return (
             <div className="site-wrapper-inner">
                 <div className="cover-container">
                     <Switch>
                         <Route path="/sobre" component={Sobre} />
-                        <Route path="/genero" render={() => <Genero movie={this.props.movie} />} />
-                        <Route render={() => <Filmes filmes={this.props.filmes} />} />
+                        <Route render={() => <Filmes movies={this.props.filmes} />} />
 
                     </Switch>
-                    <Footer nome="@rafaela" />
                 </div>
                 <Chat />
             </div>

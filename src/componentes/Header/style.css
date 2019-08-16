@@ -11,6 +11,18 @@
     text-shadow: 0 1px 3px rgba(255,255,255,.5);
 }
 
+.link{
+    color: black !important;
+    font-size: 22px;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(255,255,255,.5);
+}
+
+.link:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .masthead-brand {
     float: left;
 }
@@ -24,13 +36,13 @@
 }
 
 h3{
-    margin-left: 70px;
+    margin-left: 90px;
 }
 .nav {
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
-    margin-right: 60px;
+    margin-right: 90px;
 }
 
 .masthead-nav > li {

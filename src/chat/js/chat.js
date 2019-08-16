@@ -49,4 +49,12 @@ $(function () {
             height: "500"
         });
     });
+
+    $(".chat-show").on("click", function(){
+        $(".chat_window").show();
+        $(".chat_window").animate({
+            opacity: 1,
+            height: "500"
+        });
+      });
 });
