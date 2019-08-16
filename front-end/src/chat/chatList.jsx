@@ -1,22 +1,8 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-
-import { getMessages } from './chatActions'
 
 import $ from 'jquery';
 
 class ChatList extends Component {
-
-    constructor(props) {
-        super(props)
-
-        this.renderMessages = this.renderMessages.bind(this)
-    }
-
-    componentWillMount() {
-        this.props.getMessages();
-    }
 
     renderMessages() {
         const list = this.props.messages || [];
@@ -55,6 +41,4 @@ class ChatList extends Component {
     }
 }
 
-const mapStateToProps = state => ({ messages: state.chat.messages })
-const mapDispatchToProps = dispatch => bindActionCreators({ getMessages }, dispatch)
-export default connect(mapStateToProps, mapDispatchToProps)(ChatList)
+export default ChatList;

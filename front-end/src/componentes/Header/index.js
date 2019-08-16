@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 import "./style.css"
 
 const Header = () => (
@@ -11,9 +12,11 @@ const Header = () => (
             <a href="/">Página inicial</a>
           </li>
           <li className="">
-            <a href="#sobre">Sobre</a>
+            <Link to={'/sobre'}>Sobre</Link>
           </li>
-          
+          <li className="active">
+            <div className="link-show button">Chat</div>
+          </li>
         </ul>
       </nav>
     </div>

@@ -4,7 +4,7 @@ const INICIAL_STATE = {
     user: localStorage.getItem(consts.USER_SESSION),
     message: '',
     messages: [],
-    cart: []
+    movie: []
 }
 
 export default function (state = INICIAL_STATE, action){
@@ -17,14 +17,17 @@ export default function (state = INICIAL_STATE, action){
         case 'MESSAGE_SENT':
             return { ...state, message: '' }
         case 'CHAT_MESSAGES_FETCHED':
-            return { ...state, messages: action.payload.data.messages }
+            return { ...state, messages: (action.payload.data) ? action.payload.data.messages : []}
         case 'USER_OBTAINED':
             localStorage.setItem(consts.USER_SESSION, action.payload.data.session_id)
             return { ...state, messages: action.payload.data.messages }
-        case 'CART_FETCHED':
-            let cartItems = action.payload.data.context ?
-            action.payload.data.context.itens || [] : [];
-            return { ...state, cart: cartItems }
+        case 'MOVIES_FETCHED':
+            let moviesItems = action.payload.data.context ?
+            action.payload.data.context.filmes || [] : [];
+
+            console.log(moviesItems);
+            
+            return { ...state, movie: moviesItems }
         default:
             return state  
     }

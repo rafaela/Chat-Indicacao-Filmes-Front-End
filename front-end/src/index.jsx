@@ -8,6 +8,7 @@ import * as serviceWorker from './serviceWorker';
 import promise from 'redux-promise';
 import multi from 'redux-multi';
 import thunk from 'redux-thunk';
+import {BrowserRouter} from 'react-router-dom'
 
 import reducers from './main/reducers';
 
@@ -16,7 +17,9 @@ const store = applyMiddleware(thunk, multi, promise)(createStore)(reducers)
 
 ReactDOM.render(
    <Provider store={store}>
+         <BrowserRouter>
            <App />
+         </BrowserRouter>
     </Provider>
    , document.getElementById('root'));
 

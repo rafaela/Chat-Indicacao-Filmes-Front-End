@@ -11,6 +11,16 @@ $(function () {
         });
     });
 
+    $("link-show").click(function(){
+        console.log("ok")
+        $(".chat_window").animate({
+            opacity: 1,
+            height: "500"
+        }, 600,function(){
+            $(".chat_window").show();
+        });
+    })
+
     $(".top_menu").click(function () {
         let size = $(".chat_window").height();
         if (size === 500) {

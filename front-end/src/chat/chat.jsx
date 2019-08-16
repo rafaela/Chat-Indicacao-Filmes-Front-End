@@ -9,7 +9,7 @@ import './js/chat'
 export default props => (
     <ChatStruture>
         <ChatTitle nome="Chat" />
-        <ChatList />
+        <ChatList messages={props.messages}/>
         <ChatSend />
     </ChatStruture>
 )

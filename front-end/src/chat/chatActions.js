@@ -43,12 +43,12 @@ export const newMessage = (message) => {
     return { type: 'NEW_MESSAGE', payload: message }
 }
 
-export const getCart = () => {
+export const getMovie = () => {
     const session_id = localStorage.getItem(consts.USER_SESSION) ?
         `/${localStorage.getItem(consts.USER_SESSION)}` : '';
     const request = axios.get(`${consts.BASE_URL}/chat${session_id}`)
     return {
-        type: 'CART_FETCHED',
+        type: 'MOVIES_FETCHED',
         payload: request
     }
 }
@@ -60,7 +60,7 @@ export const sendMessage = (message) => {
         dispatch(clear());
         axios.post(`${consts.BASE_URL}/chat`, { message, session_id })
             .then(res => dispatch(storeUser(res)))
-            .then(() => dispatch(getCart()))
+            .then(() => dispatch(getMovie()))
             .then(() => dispatch(getMessages()))
     }
 }

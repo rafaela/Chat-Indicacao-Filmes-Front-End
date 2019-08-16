@@ -1,23 +1,36 @@
 import React from 'react';
+import Main from './main/main';
 import Header from './componentes/Header'
-import Sobre from './componentes/Sobre'
-import Main from './dashboard/filmes/index'
 import Footer from './componentes/Footer'
 import Chat from './chat/chat'
 import "./style.css"
 
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { getMessages } from './chat/chatActions'
 
-function App() {
-  return (
-    <div className="App">
-      <Header/>
-      <Sobre/>
-      <Main/>
-      
-      <Footer/>
-      <Chat/> 
-    </div>
-  );
+import { withRouter } from 'react-router-dom';
+
+class App extends React.Component {
+  componentWillMount() {
+    this.props.getMessages();
+  }
+
+  render() {
+    return (
+      <div className="site-wraper-inner">
+        <div className="cover-container">
+          <Header />
+          <Main filmes={this.props.movies}/>
+
+          <Footer />
+        </div>
+        <Chat messages={this.props.messages} />
+      </div>
+    );
+  }
 }
 
-export default App;
+const mapStateToProps = state => ({ messages: state.chat.messages, movies: state.chat.movie })
+const mapDispatchToProps = dispatch => bindActionCreators({ getMessages }, dispatch)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
